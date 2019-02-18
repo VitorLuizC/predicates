@@ -6,7 +6,7 @@ import Predicate from '../model/Predicate';
  * @example
  * const isObject = AND((value) => !!value, isTypeOf('object'));
  */
-const AND = (...predicates: Predicate[]): Predicate => (value) => {
+const AND = (...predicates: Predicate[]) => (value: any): value is any => {
   return predicates.every((predicate) => predicate(value));
 };
 

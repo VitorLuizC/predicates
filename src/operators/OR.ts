@@ -6,7 +6,7 @@ import Predicate from '../model/Predicate';
  * @example
  * const isNone = OR((value) => value === null, isTypeOf('undefined'));
  */
-const OR = (...predicates: Predicate[]): Predicate => (value) => {
+const OR = (...predicates: Predicate[]) => (value: any): value is any => {
   return predicates.some((predicate) => predicate(value));
 };
 

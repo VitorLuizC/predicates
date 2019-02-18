@@ -6,8 +6,6 @@ import Predicate from '../model/Predicate';
  * @example
  * const isNotNull = NOT((value) => value === null);
  */
-const NOT = (predicate: Predicate): Predicate => (value) => {
-  return !predicate(value);
-};
+const NOT = (predicate: Predicate) => (value: any): value is any => !predicate(value);
 
 export default NOT;
