@@ -1,4 +1,9 @@
 /**
+ * A generic function to contains any function.
+ */
+type Function = (...args: any[]) => any;
+
+/**
  * Returns a predicate to check if value is of type (argument).
  * @example ```js
  * const isString = isTypeOf('string');
@@ -9,15 +14,16 @@
  * ```
  * @param type
  */
-export const isTypeOf: {
-  (type: 'number'): (value: any) => value is number;
-  (type: 'string'): (value: any) => value is string;
-  (type: 'symbol'): (value: any) => value is symbol;
-  (type: 'object'): (value: any) => value is (Object | null);
-  (type: 'boolean'): (value: any) => value is boolean;
-  (type: 'function'): (value: any) => value is Function;
-  (type: 'undefined'): (value: any) => value is undefined;
-} = (type: string) => (value: any): value is any => typeof value === type;
+export function isTypeOf (type: 'number'): (value: any) => value is number;
+export function isTypeOf (type: 'string'): (value: any) => value is string;
+export function isTypeOf (type: 'symbol'): (value: any) => value is symbol;
+export function isTypeOf (type: 'object'): (value: any) => value is ({} | null);
+export function isTypeOf (type: 'boolean'): (value: any) => value is boolean;
+export function isTypeOf (type: 'function'): (value: any) => value is Function;
+export function isTypeOf (type: 'undefined'): (value: any) => value is undefined;
+export function isTypeOf (type: string) {
+  return (value: any): value is any => typeof value === type;
+}
 
 /**
  * Returns a predicate to check if value is an instance of constructor (argument).
@@ -30,6 +36,6 @@ export const isTypeOf: {
  * ```
  * @param constructor
  */
-export const isInstanceOf = <T extends Function>(constructor: T) => (value: any): value is T => (
-  value instanceof constructor
-);
+export function isInstanceOf <T>(constructor: { new(...args: any[]): T }) {
+  return (value: any): value is T => value instanceof constructor;
+}
