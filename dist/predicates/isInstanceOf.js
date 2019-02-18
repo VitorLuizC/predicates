@@ -8,7 +8,7 @@
  * isDate(new Date('2018-03-28'));
  * // => true
  */
-function isInstanceOf(constructor) {
+const isInstanceOf = (constructor) => {
     return (value) => value instanceof constructor;
-}
+};
 export default isInstanceOf;

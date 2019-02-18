@@ -8,7 +8,5 @@
  * isDate(new Date('2018-03-28'));
  * // => true
  */
-declare function isInstanceOf<T>(constructor: {
-    new (...args: any[]): T;
-}): (value: any) => value is T;
+declare const isInstanceOf: <T>(constructor: new (...args: any[]) => T) => (value: any) => value is T;
 export default isInstanceOf;
