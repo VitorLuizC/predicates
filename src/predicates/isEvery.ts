@@ -1,4 +1,4 @@
-import { AND } from "../operators";
+import { AND } from '../operators';
 
 /**
  * Check if value is an Array and every value matches predicate.

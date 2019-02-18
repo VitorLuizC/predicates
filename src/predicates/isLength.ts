@@ -1,5 +1,5 @@
-import { AND, OR } from "../operators";
-import { isTypeOf } from ".";
+import { AND, OR } from '../operators';
+import isTypeOf from './isTypeOf';
 
 /**
  * Check if value's length is equals number or between min and max.
