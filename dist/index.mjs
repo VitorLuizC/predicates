@@ -1,7 +1,3 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /**
  * Returns a predicate to check if value is an instance of constructor (argument).
  * @example
@@ -119,10 +115,4 @@ var OR = function OR() {
 
 var isObject = AND(NOT(isNull), isTypeOf('object'));
 
-exports.isInstanceOf = isInstanceOf;
-exports.isObject = isObject;
-exports.isNull = isNull;
-exports.isTypeOf = isTypeOf;
-exports.AND = AND;
-exports.NOT = NOT;
-exports.OR = OR;
+export { isInstanceOf, isObject, isNull, isTypeOf, AND, NOT, OR };

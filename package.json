@@ -2,9 +2,16 @@
   "name": "@vitorluizc/predicates",
   "version": "0.0.0",
   "description": "Composable functions to check values.",
-  "main": "index.js",
+  "cdn": "dist/index.umd.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "jsdelivr": "dist/index.umd.js",
+  "umd:main": "dist/index.umd.js",
+  "types": "types/index.d.ts",
+  "files": ["dist/", "types/"],
   "scripts": {
-    "build": "tsc",
+    "build": "bili",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +36,21 @@
   },
   "homepage": "https://github.com/VitorLuizC/predicates#readme",
   "devDependencies": {
+    "bili": "^4.2.5",
+    "rollup-plugin-typescript2": "^0.19.2",
     "typescript": "^3.3.3"
+  },
+  "bili": {
+    "input": "src/index.ts",
+    "output": {
+      "format": ["es", "cjs", "umd", "umd-min"],
+      "moduleName": "predicates"
+    },
+    "plugins": {
+      "typescript2": {
+        "clean": true,
+        "useTsconfigDeclarationDir": true
+      }
+    }
   }
 }
