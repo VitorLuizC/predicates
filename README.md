@@ -1,4 +1,4 @@
-# composable-predicates
+# `@vitorluizc/predicates`
 
 ## License
 

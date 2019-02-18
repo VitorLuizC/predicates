@@ -1,5 +1,5 @@
 {
-  "name": "composable-predicates",
+  "name": "@vitorluizc/predicates",
   "version": "0.0.0",
   "description": "Composable functions to check values.",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VitorLuizC/composable-predicates.git"
+    "url": "git+https://github.com/VitorLuizC/predicates.git"
   },
   "keywords": [
     "predicate",
@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VitorLuizC/composable-predicates/issues"
+    "url": "https://github.com/VitorLuizC/predicates/issues"
   },
-  "homepage": "https://github.com/VitorLuizC/composable-predicates#readme",
+  "homepage": "https://github.com/VitorLuizC/predicates#readme",
   "devDependencies": {
     "typescript": "^3.3.3"
   }
