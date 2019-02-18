@@ -9,8 +9,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
 
-    // Output directory configuration.
-    "outDir": "dist/"
+    // Output directory & type definitions configuration.
+    "outDir": "dist/",
+    "declaration": true,
+    "declarationDir": "types/"
   },
   "include": [
     "src/"
